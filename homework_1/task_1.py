@@ -5,6 +5,9 @@ def fibonacci(n):
         return 0
     elif n == 1:
         return 1
-    return fibonacci(n-1) + fibonacci(n-2)
+    x, y = 0, 1
+    for i in range (n):
+        x, y = y, x+y
+    return x
 
 print(fibonacci(6))
